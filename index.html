@@ -1,44 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vitaliy Shekhovtsov</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: #fff;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.2em;
-            color: #e0e0e0;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
-</head>
-<body>
-    <h1>Hello from Vitaliy Shekhovtsov!</h1>
-    <p>This site is hosted with GitHub Pages.</p>
-</body>
+
+    <!-- ✅ Вставляем сюда блок SEO и Open Graph -->
+    <meta
+      name="description"
+      content="Vitaliy Shekhovtsov — Frontend Developer. Clean UI, responsive layouts, accessible UX. HTML, CSS, JavaScript, React."
+    />
+    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+    <meta property="og:title" content="VITO — Web Developer" />
+    <meta
+      property="og:description"
+      content="Frontend Developer — clean UI, responsive layouts, accessible UX."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/banner1.jpg" />
+    <meta
+      property="og:url"
+      content="https://vitolgash.github.io/New-my-website/"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vitaliy Shekhovtsov",
+        "jobTitle": "Frontend Developer",
+        "url": "https://vitolgash.github.io/New-my-website/",
+        "email": "mailto:vito.co.uk@outlook.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Melton Mowbray",
+          "addressCountry": "UK"
+        },
+        "knowsAbout": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React",
+          "Accessibility",
+          "Responsive Design"
+        ]
+      }
+    </script>
+    <!-- ✅ конец вставки -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VITO — Web Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="top">
+    <!-- Градиент для SVG-глифов -->
+    <svg width="0" height="0" style="position: absolute">
+      <defs>
+        <linearGradient id="grad-fallback" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#00d4ff" />
+          <stop offset="50%" stop-color="#8a2be2" />
+          <stop offset="100%" stop-color="#00ffa3" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container row">
+        <a class="brand" href="#top" aria-label="Home">VITO — Web Developer</a>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <button
+            id="theme-toggle"
+            class="btn btn-icon"
+            aria-label="Toggle theme"
+          >
+            🌓
+          </button>
+
+          <!-- Аватар в шапке (WebP + fallback) -->
+          <picture>
+            <source
+              srcset="assets/img/pixelcut_avatar.webp"
+              type="image/webp"
+            />
+            <source srcset="assets/img/pixelcut_avatar.jpg" type="image/jpeg" />
+            <img
+              class="avatar avatar--header"
+              src="assets/img/pixelcut_avatar.jpg"
+              alt="Vitaliy avatar"
+              width="72"
+              height="72"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <h1>Hello, I’m <span>Vitaliy</span></h1>
+        <p>Frontend Developer — clean UI, responsive layouts, accessible UX.</p>
+        <a class="btn" href="#projects">See my work</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>About me</h2>
+          <p>
+            I build modern, responsive websites with HTML, CSS, JavaScript, and
+            React. Learning Python & ML basics.
+          </p>
+          <p>
+            Goal: reliable, accessible interfaces with strong structure and
+            performance.
+          </p>
+        </div>
+
+        <aside class="card">
+          <picture>
+            <source
+              srcset="assets/img/pixelcut_avatar.webp"
+              type="image/webp"
+            />
+            <source srcset="assets/img/pixelcut_avatar.jpg" type="image/jpeg" />
+            <img
+              class="avatar"
+              src="assets/img/pixelcut_avatar.jpg"
+              alt="Vitaliy portrait"
+              width="240"
+              height="240"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <ul class="meta">
+            <li>Melton Mowbray, UK</li>
+            <li>
+              Email:
+              <a href="mailto:vito.co.uk@outlook.com">vito.co.uk@outlook.com</a>
+            </li>
+            <li>Site: VITO — Web Developer</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="chips">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Responsive Design</li>
+          <li>Accessibility (a11y)</li>
+          <li>Git & GitHub</li>
+          <li>Python (Basics)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid-cards">
+          <!-- Project 1 -->
+          <article class="card">
+            <picture>
+              <source
+                srcset="assets/img/project-webflow.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="assets/img/project-webflow.jpg"
+                type="image/jpeg"
+              />
+              <img
+                class="card__thumb"
+                src="assets/img/project-webflow.jpg"
+                alt="Webflow / YouTube screenshot"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <h3>Webflow (YouTube)</h3>
+            <p>Saved lesson. UI ideas for portfolio.</p>
+            <div class="card__actions">
+              <a
+                class="btn btn-ghost"
+                href="https://www.youtube.com/@Webflow"
+                target="_blank"
+                rel="noopener"
+                >Open</a
+              >
+              <a class="btn btn-ghost" href="#" target="_blank" rel="noopener"
+                >Notes</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card">
+            <picture>
+              <source
+                srcset="assets/img/project-figma-recents.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="assets/img/project-figma-recents.jpg"
+                type="image/jpeg"
+              />
+              <img
+                class="card__thumb"
+                src="assets/img/project-figma-recents.jpg"
+                alt="Figma Recents screenshot"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <h3>Figma — Recents</h3>
+            <p>Recent design files and quick access.</p>
+            <div class="card__actions">
+              <a
+                class="btn btn-ghost"
+                href="https://www.figma.com"
+                target="_blank"
+                rel="noopener"
+                >Open</a
+              >
+              <a
+                class="btn btn-ghost"
+                href="https://help.figma.com"
+                target="_blank"
+                rel="noopener"
+                >Docs</a
+              >
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card">
+            <picture>
+              <source
+                srcset="assets/img/project-jewelry.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="assets/img/project-jewelry.jpg"
+                type="image/jpeg"
+              />
+              <img
+                class="card__thumb"
+                src="assets/img/project-jewelry.jpg"
+                alt="Exclusive Jewelry Collection screenshot"
+                width="1280"
+                height="720"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <h3>Exclusive Jewelry Collection</h3>
+            <p>Elegant e-commerce catalog. Typography, pricing, gallery.</p>
+            <div class="card__actions">
+              <a class="btn btn-ghost" href="#" target="_blank" rel="noopener"
+                >Live</a
+              >
+              <a class="btn btn-ghost" href="#" target="_blank" rel="noopener"
+                >Code</a
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--alt">
+      <div class="container grid-2">
+        <div>
+          <h2>Let’s work together</h2>
+          <p>Have a project or idea? Send me a message.</p>
+          <a class="btn" href="mailto:vito.co.uk@outlook.com">Email me</a>
+        </div>
+        <div class="card">
+          <h3>Quick details</h3>
+          <ul class="meta">
+            <li>Stack: HTML, CSS, JS, React</li>
+            <li>Tools: VS Code, Git, XAMPP/WordPress</li>
+            <li>Learning: Python, ML (NumPy/Pandas)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container row">
+        <p>© 2025 VITO — Web Developer</p>
+        <p class="footer-contact">
+          Email:
+          <a href="mailto:vito.co.uk@outlook.com">vito.co.uk@outlook.com</a> •
+          Site: VITO — Web Developer
+        </p>
+        <a href="#top" class="backtotop">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <!-- SVG ambient glyphs -->
+    <div class="svg-ambient" aria-hidden="true">
+      <svg
+        class="glyph"
+        viewBox="0 0 100 100"
+        style="--x: 10%; --y: 18%; --s: 1; --d: 22s"
+      >
+        <text x="50" y="60" text-anchor="middle">&lt;/&gt;</text>
+      </svg>
+      <svg
+        class="glyph"
+        viewBox="0 0 100 100"
+        style="--x: 82%; --y: 22%; --s: 1.2; --d: 26s"
+      >
+        <text x="50" y="60" text-anchor="middle">{ }</text>
+      </svg>
+      <svg
+        class="glyph"
+        viewBox="0 0 100 100"
+        style="--x: 20%; --y: 40%; --s: 0.9; --d: 28s"
+      >
+        <text x="50" y="60" text-anchor="middle">JS</text>
+      </svg>
+      <svg
+        class="glyph"
+        viewBox="0 0 100 100"
+        style="--x: 58%; --y: 48%; --s: 1.1; --d: 24s"
+      >
+        <text x="50" y="60" text-anchor="middle">&lt;h1&gt;</text>
+      </svg>
+      <svg
+        class="glyph"
+        viewBox="0 0 100 100"
+        style="--x: 46%; --y: 74%; --s: 1; --d: 30s"
+      >
+        <text x="50" y="60" text-anchor="middle">.map()</text>
+      </svg>
+      <svg
+        class="glyph"
+        viewBox="0 0 100 100"
+        style="--x: 6%; --y: 86%; --s: 0.95; --d: 27s"
+      >
+        <text x="50" y="60" text-anchor="middle">()=>{}</text>
+      </svg>
+      <svg
+        class="glyph"
+        viewBox="0 0 100 100"
+        style="--x: 90%; --y: 62%; --s: 1.05; --d: 21s"
+      >
+        <text x="50" y="60" text-anchor="middle">querySelector</text>
+      </svg>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
